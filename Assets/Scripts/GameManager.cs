@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour
     {
         isGamestart = false;
     }
-
+    void Start()
+    {
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+    } 
     // Update is called once per frame
     void Update()
     {

@@ -44,14 +44,20 @@ TagManager:
   - name: BackGround
     uniqueID: 504026421
     locked: 0
-  - name: Player
-    uniqueID: 437855305
-    locked: 0
   - name: Whale
     uniqueID: 2390146621
     locked: 0
   - name: Fish
     uniqueID: 357164777
+    locked: 0
+  - name: SeaBackGround
+    uniqueID: 2120003659
+    locked: 0
+  - name: Player
+    uniqueID: 437855305
+    locked: 0
+  - name: UI
+    uniqueID: 1103402643
     locked: 0
   m_RenderingLayers:
   - Default
