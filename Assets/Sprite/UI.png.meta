@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 703398baa12c7eb4cbcb28858b08d96a
+guid: bcf5187458ae2374d9cde5659f112f67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6281131167225639102
-    second: Seagull_0
-  - first:
-      213: -2286570292335278677
-    second: Seagull_1
-  - first:
-      213: -7844154010315156741
-    second: Seagull_2
-  - first:
-      213: -667152794073176298
-    second: Seagull_3
+      213: -1557013538026691241
+    second: UI_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Seagull_0
+      name: UI_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb07e1a848f0b2750800000000000000
-      internalID: 6281131167225639102
+      spriteID: 755e173cf60646ae0800000000000000
+      internalID: -1557013538026691241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Seagull_1
+      name: UI_1
       rect:
         serializedVersion: 2
         x: 24
@@ -170,54 +161,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ba505631f687440e0800000000000000
-      internalID: -2286570292335278677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Seagull_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf295bbdc77f32390800000000000000
-      internalID: -7844154010315156741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Seagull_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 617eb5a811ccdb6f0800000000000000
-      internalID: -667152794073176298
+      spriteID: 857e81ea746b26149bcb52cbda477637
+      internalID: 429510959
       vertices: []
       indices: 
       edges: []
@@ -226,7 +173,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ff4d69a5dd9b2d141ba042d2e6569a7b
+    spriteID: e90ac30055734b8478096b8748a39cf8
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +183,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Seagull_0: 6281131167225639102
-      Seagull_1: -2286570292335278677
-      Seagull_2: -7844154010315156741
-      Seagull_3: -667152794073176298
+      UI_0: -1557013538026691241
+      UI_1: 429510959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
