@@ -19,7 +19,6 @@ public class BackgroundScaler : MonoBehaviour
         // 카메라의 높이와 너비 계산
         float screenHeight = cam.orthographicSize * 2f;
         float screenWidth = screenHeight * cam.aspect;
-        screenHeight = cam.orthographicSize * 1.25f;
 
         // 스프라이트 원본 사이즈
         Vector2 spriteSize = sr.sprite.bounds.size;
