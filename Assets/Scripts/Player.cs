@@ -1,6 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -9,22 +8,24 @@ public class Player : MonoBehaviour
     public float ascendForce = 5f;
     private float maxAscendSpeed = 2f;
     public float currentEnergy;
-    public float maxEnergy;
+    public float maxEnergy = 100;
     public float distance; //항해한 거리
     public static float score;
-    public GameManager gameManager;
     private Rigidbody2D rigid;
     public FishData fishData;
-  
+     public UnityEvent onHit;
+
+    public GameManager gameManager;
+
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        currentEnergy = maxEnergy;
+        maxEnergy = PlayerPrefs.GetFloat("Energy",maxEnergy);
     }
     void FixedUpdate()
     {
-        if (!gameManager.isGamestart)
+        if (!GameManager.isGamestart)
         {
             return;
         }
@@ -44,25 +45,31 @@ public class Player : MonoBehaviour
 }
     void Update()
     {
-        if (!gameManager.isGamestart)
+        if (!GameManager.isGamestart)
         {
             return;
         }
         rigid.simulated = true;
         currentEnergy -= Time.deltaTime * 1.15f;
         distance += Time.deltaTime * 1.2f;
-       
+        if (currentEnergy <= 0)
+        {
+            AnimatorChange(State.Die);
+            rigid.simulated = false;
+            gameManager.GameOver();
+       }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Whale"))
         {
-            rigid.simulated = false;
             AnimatorChange(State.Die);
-         
+            rigid.simulated = false;
+            onHit.Invoke();
         }      
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Fish"))
@@ -75,10 +82,9 @@ public class Player : MonoBehaviour
                 currentEnergy = maxEnergy;
             }
             score += fishData.score;
-            
-      
-        }        
-   }
+
+        }
+    }
 
 
     void AnimatorChange(State state) {

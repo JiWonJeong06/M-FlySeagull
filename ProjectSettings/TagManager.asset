@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fish
   - Whale
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -60,6 +61,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 437855305
+    locked: 0
+  - name: GameOverUI
+    uniqueID: 1986636577
     locked: 0
   m_RenderingLayers:
   - Default

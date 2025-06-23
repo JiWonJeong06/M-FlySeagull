@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
-        if (!gameManager.isGamestart || isSpawning)
+        if (!GameManager.isGamestart || isSpawning)
             return;
 
         StartCoroutine(SpawnDelay(spawnInterval));
