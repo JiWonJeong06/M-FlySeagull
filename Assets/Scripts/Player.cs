@@ -7,13 +7,14 @@ public class Player : MonoBehaviour
     public enum State { Idle, Die };
     Animator animator;
     public float ascendForce = 5f;
+    private float maxAscendSpeed = 2f;
     public float currentEnergy;
     public float maxEnergy;
+    public float distance; //항해한 거리
+    public static float score;
     public GameManager gameManager;
-    public SpawnManager spawnManager;
-
     private Rigidbody2D rigid;
-
+    public FishData fishData;
     public UnityEvent onHit;
     void Start()
     {
@@ -27,17 +28,20 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
+ if (Input.touchCount > 0)
+{
+    Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+    if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+    {
+            if (rigid. linearVelocity.y < maxAscendSpeed)
             {
                 rigid.AddForce(Vector2.up * ascendForce);
-        
             }
-        }
+            
     }
+}
+}
     void Update()
     {
         if (!gameManager.isGamestart)
@@ -45,7 +49,8 @@ public class Player : MonoBehaviour
             return;
         }
         rigid.simulated = true;
-        currentEnergy -= Time.deltaTime * 5f;
+        currentEnergy -= Time.deltaTime * 1.15f;
+        distance += Time.deltaTime * 1.2f;
        
     }
 
@@ -61,17 +66,16 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Fish"))
         {
-            Debug.Log("생선야금야금야금야금");
-           Destroy(collision.gameObject);
-            foreach (Fish fish in spawnManager.Fish)
+
+            Destroy(collision.gameObject);
+            currentEnergy += fishData.energy;
+            if (currentEnergy >= maxEnergy)
             {
-                if (fish.fish.name.Contains(collision.gameObject.name.Replace("(Clone)", "").Trim()))
-                {
-                    Debug.Log("에너지는 이만큼 먹었지" + fish.energy);
-                    Debug.Log("점수는 이만큼 먹었지" + fish.score);
-                    Debug.Log(fish.name + "이생선이지 키키윽");
+                currentEnergy = maxEnergy;
             }
-            }
+            score += fishData.score;
+            
+      
         }        
    }
 

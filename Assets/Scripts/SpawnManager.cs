@@ -2,19 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Fish
-{
-    public string name;
-    public int id;
-    public GameObject fish;
-    public float energy;
-    public float score;
-}
+
 public class SpawnManager : MonoBehaviour
 {
     public GameManager gameManager;         
-    public List<Fish> Fish;               
+    public GameObject[] Fish;               
     public GameObject whalePrefab;
     [Header("소환 간격")]
     public float spawnInterval = 2f;      
@@ -43,18 +35,20 @@ public class SpawnManager : MonoBehaviour
     private void SpawnObject()
     {
         int Randomobj = Random.Range(0, 2);
-        Vector3 spawnPosition = new Vector3(10, -1.85f, 0);
+       
         Debug.Log("소환");
         //생선 소환
         if (Randomobj == 0)
         {
-            int randomIndex = Random.Range(0, Fish.Count);
-            Fish selectedFish = Fish[randomIndex];
-            Instantiate(selectedFish.fish, spawnPosition, Quaternion.identity);
+            float Ranpos = Random.Range(-3.05f, 2.5f);
+            Vector3 fishpos = new Vector3(10, Ranpos, 0);
+            int randomIndex = Random.Range(0, Fish.Length);
+            Instantiate(Fish[randomIndex], fishpos, Quaternion.identity);
         }
         //고래 소환
         if (Randomobj == 1)
         {
+            Vector3 spawnPosition = new Vector3(10, -1.85f, 0);
             Instantiate(whalePrefab, spawnPosition, Quaternion.identity);
         }
     }

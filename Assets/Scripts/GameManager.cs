@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,10 +20,30 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
-    } 
+    }
     // Update is called once per frame
     void Update()
     {
 
+    }
+    public void EnergyLevelUp() //에너지 레벨업
+    {
+        
+    }
+       public void FishLevelUp() //생선 레벨업
+    {
+        
+    }
+    public void DistanceLevelUp()//거리 레벨업
+    {
+        
+    }
+    public void Setting()
+    {
+
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
