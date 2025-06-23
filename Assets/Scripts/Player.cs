@@ -1,6 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public class Player : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public GameManager gameManager;
     private Rigidbody2D rigid;
     public FishData fishData;
-    public UnityEvent onHit;
+  
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -58,8 +58,9 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.CompareTag("Whale"))
         {
+            rigid.simulated = false;
             AnimatorChange(State.Die);
-            gameManager.GameOver();
+         
         }      
     }
     private void OnTriggerEnter2D(Collider2D collision)
