@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     public float currentEnergy;
     public float maxEnergy;
     public GameManager gameManager;
+    public SpawnManager spawnManager;
 
     private Rigidbody2D rigid;
 
@@ -32,7 +34,7 @@ public class Player : MonoBehaviour
             if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
             {
                 rigid.AddForce(Vector2.up * ascendForce);
-                Debug.Log("화면을 꾹 누르고 있음 (천천히 상승 중)");
+        
             }
         }
     }
@@ -44,18 +46,34 @@ public class Player : MonoBehaviour
         }
         rigid.simulated = true;
         currentEnergy -= Time.deltaTime * 5f;
-        Gameover();
+       
     }
 
-    void Gameover()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (currentEnergy <= 0)
+        if (collision.collider.CompareTag("Whale"))
         {
-            rigid.simulated = false;
+            AnimatorChange(State.Die);
             gameManager.GameOver();
-            onHit.Invoke();
-        }
+        }      
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Fish"))
+        {
+            Debug.Log("생선야금야금야금야금");
+           Destroy(collision.gameObject);
+            foreach (Fish fish in spawnManager.Fish)
+            {
+                if (fish.fish.name.Contains(collision.gameObject.name.Replace("(Clone)", "").Trim()))
+                {
+                    Debug.Log("에너지는 이만큼 먹었지" + fish.energy);
+                    Debug.Log("점수는 이만큼 먹었지" + fish.score);
+                    Debug.Log(fish.name + "이생선이지 키키윽");
+            }
+            }
+        }        
+   }
 
 
     void AnimatorChange(State state) {
