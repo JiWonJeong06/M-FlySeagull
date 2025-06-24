@@ -37,7 +37,7 @@ public class SpawnManager : MonoBehaviour
     private void SpawnObject()
     {
         int Randomobj = Random.Range(0, 2);
-       
+
         Debug.Log("소환");
         //생선 소환
         if (Randomobj == 0)
@@ -53,9 +53,8 @@ public class SpawnManager : MonoBehaviour
             Vector3 spawnPosition = new Vector3(8, -1.85f, 0);
             int randomIndex = Random.Range(0, whalePrefab.Length);
             Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
-            
-
-            // test브랜치
+        //demo test
         }
+        
     }
 }
