@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         isGamestart = false;
         gameovercanvas.SetActive(true);
-        coin += player.distance * 10 * levelManager.bonusdistance;
+        coin += player.distance * 3 * levelManager.bonusdistance;
         bestscore = PlayerPrefs.GetFloat("bestscore");
         PlayerPrefs.SetFloat("bestscore", Mathf.Max(bestscore, Player.score));
         PlayerPrefs.SetFloat("coin", coin);

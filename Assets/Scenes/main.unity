@@ -4987,8 +4987,13 @@ MonoBehaviour:
   - {fileID: 1156856967060993024, guid: d2a3b93560b3fe84e94ed8ed9a09d042, type: 3}
   - {fileID: 2479232426205799661, guid: b965a9b08d452d4469159c27b2a2ccc0, type: 3}
   - {fileID: 2218370594536616428, guid: 5ce773036167289498a11a61886fecb4, type: 3}
-  whalePrefab: {fileID: 5435742687419439905, guid: 50f934811e926984099d65c6788c044e, type: 3}
-  spawnInterval: 3.5
+  whalePrefab:
+  - {fileID: 5435742687419439905, guid: e0ebaaabfc797eb449a7151be131d1ee, type: 3}
+  - {fileID: 5435742687419439905, guid: bf2a3f8f68ed3c748b946e4f168ea596, type: 3}
+  - {fileID: 5435742687419439905, guid: 619e6dd231a899244a8db6107ddb4e69, type: 3}
+  - {fileID: 5435742687419439905, guid: 13fc9d7c898fdd445850b8400704285a, type: 3}
+  - {fileID: 5435742687419439905, guid: e1b7a656d5acdc048bb31d8fd0fbf7f8, type: 3}
+  spawnInterval: 2.8
 --- !u!1 &2051481186
 GameObject:
   m_ObjectHideFlags: 0
