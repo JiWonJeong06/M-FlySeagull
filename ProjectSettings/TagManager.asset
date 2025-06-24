@@ -47,6 +47,9 @@ TagManager:
   - name: BackGround
     uniqueID: 504026421
     locked: 0
+  - name: InGameUI
+    uniqueID: 4102792835
+    locked: 0
   - name: Whale
     uniqueID: 2390146621
     locked: 0

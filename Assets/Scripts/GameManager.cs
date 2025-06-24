@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static float coin = 0;
-
+    public float bestscore = 0;
     public static bool isGamestart = false;
     public GameObject canvas;
     public GameObject gameovercanvas;
@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         isGamestart = false;
         gameovercanvas.SetActive(true);
+        
     }
     public void ReStart()
     {

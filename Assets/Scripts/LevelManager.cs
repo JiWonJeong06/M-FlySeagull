@@ -9,13 +9,13 @@ public class LevelManager : MonoBehaviour
     public FishData fishData;
     private float levelup = 1.03f;
 
-    private int eg = 1;
-    private int fh = 1;
-    private int dt = 1;
+    public int eg = 1;
+    public int fh = 1;
+    public int dt = 1;
 
-    private float giveeg = 1000;
-    private float givefh = 1500;
-    private float givedt = 500;
+    public float giveeg = 1000;
+    public float givefh = 1500;
+    public float givedt = 500;
 
     public Text elup;
     public Text flup;
@@ -26,12 +26,6 @@ public class LevelManager : MonoBehaviour
    public Text tgivedt;
     void Start()
     {
-        tgiveeg.text = "₩ " + giveeg.ToString("F2");
-        elup.text = "LV. " + eg.ToString("D0");
-        tgivefh.text = "₩ " + givefh.ToString("F2");
-        flup.text = "LV. " + fh.ToString("D0");
-        tgivedt.text = "₩ " + givedt.ToString("F2");
-        dtlup.text = "LV. " + dt.ToString("D0");
 
         eg = PlayerPrefs.GetInt("eg", eg);
         fh = PlayerPrefs.GetInt("fh", fh);
@@ -41,6 +35,12 @@ public class LevelManager : MonoBehaviour
         givefh = PlayerPrefs.GetFloat("givefh", givefh);
         givedt = PlayerPrefs.GetFloat("givedt", givedt);
 
+        tgiveeg.text = "₩ " + giveeg.ToString("F2");
+        elup.text = "LV. " + eg.ToString("D0");
+        tgivefh.text = "₩ " + givefh.ToString("F2");
+        flup.text = "LV. " + fh.ToString("D0");
+        tgivedt.text = "₩ " + givedt.ToString("F2");
+        dtlup.text = "LV. " + dt.ToString("D0");
         
     }
     public void EnergyLevelUp() //에너지 레벨업

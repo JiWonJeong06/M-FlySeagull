@@ -9,11 +9,13 @@ public class TextManager : MonoBehaviour
     public Text Dtext; //거리
     public Text Stext; //점수
     public Text BStext; //최고 기록
-
     public Text Ctext; //코인
+
+    public GameManager gameManager;
+
     void Start()
     {
-        BStext.text = "최고기록: ";
+        BStext.text = "최고기록: " + gameManager.bestscore.ToString("F0");
     }
 
 
