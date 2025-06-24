@@ -8,18 +8,25 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
     public GameObject gameovercanvas;
     public Player player;
+    public LevelManager levelManager;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void GameStart()
     {
         isGamestart = true;
         canvas.SetActive(false);
         player.currentEnergy = player.maxEnergy;
-        
+
     }
     public void GameOver()
     {
         isGamestart = false;
         gameovercanvas.SetActive(true);
+        coin += player.distance * 10 * levelManager.bonusdistance;
+        bestscore = PlayerPrefs.GetFloat("bestscore");
+        PlayerPrefs.SetFloat("bestscore", Mathf.Max(bestscore, Player.score));
+        PlayerPrefs.SetFloat("coin", coin);
         
     }
     public void ReStart()
@@ -28,21 +35,17 @@ public class GameManager : MonoBehaviour
         Player.score = 0f;
         PlayerPrefs.Save();
     }
-    void Start()
+    void Awake()
     {
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
         coin = PlayerPrefs.GetFloat("coin", coin);
+        bestscore = PlayerPrefs.GetFloat("bestscore", bestscore);
 
-        //PlayerPrefs.DeleteAll();
-        //PlayerPrefs.Save();
+        
+
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
 
     public void Setting()
     {

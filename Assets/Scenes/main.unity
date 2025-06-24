@@ -3556,6 +3556,7 @@ MonoBehaviour:
   canvas: {fileID: 402209073}
   gameovercanvas: {fileID: 2066298309}
   player: {fileID: 446427524}
+  levelManager: {fileID: 1788800403}
 --- !u!1 &1544460209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,6 +4412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 446427524}
   fishData: {fileID: 1800068365}
+  bonusdistance: 1
   eg: 1
   fh: 1
   dt: 1

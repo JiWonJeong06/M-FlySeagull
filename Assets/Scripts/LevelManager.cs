@@ -9,6 +9,9 @@ public class LevelManager : MonoBehaviour
     public FishData fishData;
     private float levelup = 1.03f;
 
+    public float bonusdistance = 1;
+    private float bonuslevelup = 1.05f;
+
     public int eg = 1;
     public int fh = 1;
     public int dt = 1;
@@ -30,6 +33,8 @@ public class LevelManager : MonoBehaviour
         eg = PlayerPrefs.GetInt("eg", eg);
         fh = PlayerPrefs.GetInt("fh", fh);
         dt = PlayerPrefs.GetInt("dt", dt);
+        bonusdistance = PlayerPrefs.GetFloat("bonusdistance", bonusdistance); 
+       
 
         giveeg = PlayerPrefs.GetFloat("giveeg", giveeg);
         givefh = PlayerPrefs.GetFloat("givefh", givefh);
@@ -93,6 +98,8 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetFloat("givedt", givedt);
             Scroll.whalescore *= levelup;
             PlayerPrefs.SetFloat("whalescore",Scroll.whalescore);
+            bonusdistance *= bonuslevelup;
+            PlayerPrefs.SetFloat("bonusdistance", bonusdistance); 
             dtlup.text = "LV. " + dt.ToString("D0");
             tgivedt.text = "₩ " + givedt.ToString("F2");
             PlayerPrefs.Save();
