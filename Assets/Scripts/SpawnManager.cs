@@ -51,8 +51,11 @@ public class SpawnManager : MonoBehaviour
         if (Randomobj == 1)
         {
             Vector3 spawnPosition = new Vector3(8, -1.85f, 0);
-             int randomIndex = Random.Range(0, whalePrefab.Length);
+            int randomIndex = Random.Range(0, whalePrefab.Length);
             Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
+            
+
+            // test브랜치
         }
     }
 }
