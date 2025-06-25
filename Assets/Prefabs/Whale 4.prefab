@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8853744962928194042}
   - component: {fileID: 9182383395154139849}
   - component: {fileID: 3827555599103863857}
-  - component: {fileID: 7512959296779458372}
+  - component: {fileID: 2187446971183015830}
   m_Layer: 0
   m_Name: Water
   m_TagString: Whale
@@ -116,8 +116,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &7512959296779458372
-CapsuleCollider2D:
+--- !u!60 &2187446971183015830
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,9 +150,32 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.021656003, y: 0.7632452}
-  m_Size: {x: 0.25775003, y: 1.5264904}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.375, y: 0, z: 0.4166667, w: 0.2916667}
+    pivot: {x: 0.5, y: 0.0006982808}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1.5264273}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 1
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.2139448, y: 1.5237138}
+      - {x: -0.2875629, y: 1.4449205}
+      - {x: -0.29759994, y: 1.3082536}
+      - {x: -0.15141532, y: 1.2677637}
+      - {x: -0.1272614, y: 0.7541718}
+      - {x: -0.20833334, y: -0.0006982883}
+      - {x: 0.16666667, y: -0.0006982883}
+      - {x: 0.08743489, y: 0.34505114}
+      - {x: 0.080737084, y: 0.73577344}
+      - {x: 0.09464195, y: 1.2768109}
+      - {x: 0.23769163, y: 1.2803528}
+      - {x: 0.23618099, y: 1.4311216}
+      - {x: 0.19170856, y: 1.5098555}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5435742687419439905
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollspeed: 1.35
+  fishData: {fileID: 0}
 --- !u!95 &7976387952813800653
 Animator:
   serializedVersion: 7

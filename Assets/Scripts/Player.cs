@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public enum State { Idle, Die };
     Animator animator;
     public float ascendForce = 5f;
-    private float maxAscendSpeed = 2f;
+    private float maxAscendSpeed = 3f;
     public float currentEnergy;
     public float maxEnergy = 100;
     public float distance; //항해한 거리
