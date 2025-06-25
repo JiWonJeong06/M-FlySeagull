@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    int gcoin = 1000;
-    int scoin = 500;
-    int bcoin = 100;
+    int gcoin = 1500;
+    int scoin = 1000;
+    int bcoin = 500;
     public bool isgcoin;
     public bool isscoin;
     public bool isbcoin;

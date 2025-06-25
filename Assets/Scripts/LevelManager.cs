@@ -19,8 +19,8 @@ public class LevelManager : MonoBehaviour
     public int fh = 1;
     public int dt = 1;
 
-    public float giveeg = 1000;
-    public float givefh = 1500;
+    public float giveeg = 500;
+    public float givefh = 500;
     public float givedt = 500;
 
     public Text elup;
@@ -77,7 +77,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("fh", fh);
             GameManager.coin -= givefh;
             PlayerPrefs.SetFloat("coin", GameManager.coin);
-            givefh *= 1.15f;
+            givefh *= 1.07f;
             PlayerPrefs.SetFloat("givefh", givefh);
             fishData.energy *= flevelup1;
             PlayerPrefs.SetFloat("FEnergy", fishData.energy);
@@ -97,10 +97,10 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("dt", dt);
             GameManager.coin -= givedt;
             PlayerPrefs.SetFloat("coin", GameManager.coin);
-            givedt *= 1.03f;
+            givedt *= 1.035f;
             PlayerPrefs.SetFloat("givedt", givedt);
-            Scroll.whalescore *= dlevelup;
-            PlayerPrefs.SetFloat("whalescore",Scroll.whalescore);
+            fishData.whalescore *= dlevelup;
+            PlayerPrefs.SetFloat("whalescore",fishData.whalescore);
             bonusdistance *= bonuslevelup;
             PlayerPrefs.SetFloat("bonusdistance", bonusdistance); 
             dtlup.text = "LV. " + dt.ToString("D0");

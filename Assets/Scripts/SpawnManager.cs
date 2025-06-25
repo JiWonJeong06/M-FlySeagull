@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameManager gameManager;         
+    public GameManager gameManager;
+    public FishData fishData;    
     public GameObject[] Fish;               
     public GameObject[] whalePrefab;
+    public GameObject wp;
 
     [Header("소환 간격")]
     public float spawnInterval = 2f;      
 
     private bool isSpawning = false;
 
-  
+    
     void Update()
     {
         if (!GameManager.isGamestart || isSpawning)
@@ -46,13 +48,18 @@ public class SpawnManager : MonoBehaviour
             Vector3 fishpos = new Vector3(8, Ranpos, 0);
             int randomIndex = Random.Range(0, Fish.Length);
             Instantiate(Fish[randomIndex], fishpos, Quaternion.identity);
+            if (wp == null)
+            {
+                return;
+            }
         }
         //고래 소환
         if (Randomobj == 1)
         {
             Vector3 spawnPosition = new Vector3(8, -1.85f, 0);
             int randomIndex = Random.Range(0, whalePrefab.Length);
-            Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
+            wp = Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
+            wp.GetComponent<Scroll>().fishData = fishData;
         //demo test
         }
         
