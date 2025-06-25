@@ -4,6 +4,7 @@ public class Scroll : MonoBehaviour
 {
     public float scrollspeed;
     private bool scoreAdded = false; // 한 번만 실행되도록 제어할 변수
+    private bool seagullsound = false;
 
     public FishData fishData;
     
@@ -17,18 +18,22 @@ public class Scroll : MonoBehaviour
         float totalSpeed = scrollspeed * Time.deltaTime * -1f;
         transform.Translate(totalSpeed, 0, 0);
 
-        if (!scoreAdded && transform.position.x <= -1.5f && CompareTag("Whale"))
+        if (!scoreAdded && transform.position.x <= -2f && CompareTag("Whale"))
         {
             Player.score += fishData.whalescore;
             scoreAdded = true; // 다음부터는 실행되지 않도록 설정
         }
-        if (!scoreAdded && transform.position.x <= 2.8f && CompareTag("Seagull"))
+        if (!seagullsound && CompareTag("Seagull") && transform.position.x <= 2.8f)
         {
-            Player.score += fishData.whalescore;
             SoundManager.effect[2].Play();
-            scoreAdded = true; // 다음부터는 실행되지 않도록 설정
-        }
+            if (!scoreAdded && transform.position.x <= -2f && CompareTag("Seagull"))
+            {
+                Player.score += fishData.whalescore;
 
+                scoreAdded = true; 
+                seagullsound = true;
+            }
+        }
         if (transform.position.x < -10)
         {
             Destroy(gameObject);
