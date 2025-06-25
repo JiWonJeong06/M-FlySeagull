@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1858,7 +1858,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uCD5C\uACE0\uAE30\uB85D: 0000000"
+  m_Text: "\uCD5C\uACE0\uAE30\uB85D: 0.00"
 --- !u!222 &499547091
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD56D\uD574: 10000m"
+  m_Text: "\uD56D\uD574: 0.0m"
 --- !u!222 &530456772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2351,7 +2351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785, y: 579}
+  m_AnchoredPosition: {x: 785, y: 976}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040409768
@@ -2375,11 +2375,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2518,7 +2518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000000
+  m_Text: 0.00
 --- !u!222 &1043106098
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4298,7 +4298,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: -200, y: 1000}
+  m_SizeDelta: {x: -200, y: 1800}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1614090256
 MonoBehaviour:
@@ -4698,7 +4698,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u20A9 1000"
+  m_Text: "\u20A9 0"
 --- !u!222 &1787671022
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5309,7 +5309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -357}
+  m_AnchoredPosition: {x: 35, y: -775}
   m_SizeDelta: {x: 1650, y: 211.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960483853
@@ -5389,8 +5389,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -57}
-  m_SizeDelta: {x: 1720, y: 845.6}
+  m_AnchoredPosition: {x: 0, y: 57.275024}
+  m_SizeDelta: {x: 1720, y: 1453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008769151
 MonoBehaviour:
@@ -5414,21 +5414,21 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 09657f4932859954e9c10770407cdef6, type: 3}
-    m_FontSize: 60
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 93
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAE30\uB825 : 110.87 \n(+3.5%) , \uAC00\uACA9 \uC0C1\uC2B9\uB960: +5%\n\n\uBB3C\uACE0\uAE30
-    : \uAE30\uB825: +3.09 \uC810\uC218: +84.87\n(\uAC01, +1.5%, +3%),  \uAC00\uACA9
-    \uC0C1\uC2B9\uB960: +7%\n\n\uD56D\uD574 : \uACE0\uB798: +82.79 \uBCF4\uB108\uC2A4:
-    x1.22\n(\uAC01, +2.5%, 1.5%) \uAC00\uACA9 \uC0C1\uC2B9\uB960: +3.5%\n\n"
+  m_Text: "\uAE30\uB825 : \n110.87 \n(+3.5%) , \uAC00\uACA9 \uC0C1\uC2B9\uB960: +5%\n\n\n\uBB3C\uACE0\uAE30
+    : \n\uAE30\uB825: +3.09 \uC810\uC218: +84.87\n(\uAC01, +1.5%, +3%),  \uAC00\uACA9
+    \uC0C1\uC2B9\uB960: +7%\n\n\n\uD56D\uD574 : \n\uACE0\uB798: +82123123123.79 \uCF54\uC778\uBCF4\uB108\uC2A4:
+    x 213.123\n(\uAC01, +2.5%, 1.5%) \uAC00\uACA9 \uC0C1\uC2B9\uB960: +3.5%\n\n"
 --- !u!222 &2008769152
 CanvasRenderer:
   m_ObjectHideFlags: 0

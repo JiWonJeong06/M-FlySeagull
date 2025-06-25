@@ -34,9 +34,9 @@ public class TextManager : MonoBehaviour
         Etext.text = "기력: " + player.currentEnergy.ToString("F0") + " / " + player.maxEnergy.ToString("F0");
         Dtext.text = "항해: " + player.distance.ToString("F1") + "m";
         Stext.text = Player.score.ToString("F2");
-        Itext.text = "기력 : " + player.maxEnergy.ToString("F2") + " \n(+3.5%) , 가격 상승률: +5%\n\n" +
-        "물고기 : " + "기력: +" + fishData.energy.ToString("F2") + " 점수: +" + fishData.score.ToString("F2") + "\n(각, +1.5%, +3%),  가격 상승률: +7%\n\n"
-        + "항해 : " + "고래: +" + fishData.whalescore.ToString("F2") + " 보너스: x" + levelManager.bonusdistance.ToString("F2") + "\n(각, +2.5%, 1.5%) 가격 상승률: +3.5%\n\n";
+        Itext.text = "기력\n" + player.maxEnergy.ToString("F2") + " \n(+3.5%) , 가격 상승률: +5%\n\n\n" +
+        "물고기\n" + "기력: +" + fishData.energy.ToString("F2") + " 점수: +" + fishData.score.ToString("F2") + "\n(각, +1.5%, +3%),  가격 상승률: +7%\n\n\n"
+        + "항해\n" + "고래: +" + fishData.whalescore.ToString("F2") + " 코인 보너스: x" + levelManager.bonusdistance.ToString("F2") + "\n(각, +2.5%, 1.5%) 가격 상승률: +3.5%\n\n";
 
         totalcoin.text = "항해로 번 돈(코인제외)\n₩" + gameManager.distancecoin.ToString("F2");
         totalscore.text =  "스코어\n " + Player.score.ToString("F2");
