@@ -23,17 +23,20 @@ public class Scroll : MonoBehaviour
             Player.score += fishData.whalescore;
             scoreAdded = true; // 다음부터는 실행되지 않도록 설정
         }
-        if (!seagullsound && CompareTag("Seagull") && transform.position.x <= 2.8f)
+     if (CompareTag("Seagull"))
+    {
+        if (!seagullsound && transform.position.x <= 2.8f)
         {
             SoundManager.effect[2].Play();
-            if (!scoreAdded && transform.position.x <= -2f && CompareTag("Seagull"))
-            {
-                Player.score += fishData.whalescore;
-
-                scoreAdded = true; 
-                seagullsound = true;
-            }
+            seagullsound = true;  // 소리 재생은 1번만 하도록 설정
         }
+
+        if (!scoreAdded && transform.position.x <= -2f)
+        {
+            Player.score += fishData.whalescore;
+            scoreAdded = true;    // 점수는 1번만 추가되도록 설정
+        }
+    }
         if (transform.position.x < -10)
         {
             Destroy(gameObject);
