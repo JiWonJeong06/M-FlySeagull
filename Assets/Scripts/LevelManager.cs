@@ -7,7 +7,10 @@ public class LevelManager : MonoBehaviour
 
     public Player player;
     public FishData fishData;
-    private float levelup = 1.03f;
+    private float elevelup = 1.035f;
+    private float flevelup1 = 1.015f; //생선 기력
+    private float flevelup2 = 1.03f; //생선 점수
+    private float dlevelup = 1.025f; 
 
     public float bonusdistance = 1;
     private float bonuslevelup = 1.05f;
@@ -58,7 +61,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetFloat("coin", GameManager.coin);
             giveeg *= 1.05f;
             PlayerPrefs.SetFloat("giveeg", giveeg);
-            player.maxEnergy *= levelup;
+            player.maxEnergy *= elevelup;
             PlayerPrefs.SetFloat("Energy", player.maxEnergy);
             elup.text = "LV. " + eg.ToString("D0");
             tgiveeg.text = "₩ " + giveeg.ToString("F2");
@@ -76,9 +79,9 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetFloat("coin", GameManager.coin);
             givefh *= 1.15f;
             PlayerPrefs.SetFloat("givefh", givefh);
-            fishData.energy *= levelup;
+            fishData.energy *= flevelup1;
             PlayerPrefs.SetFloat("FEnergy", fishData.energy);
-            fishData.score *= levelup;
+            fishData.score *= flevelup2;
             PlayerPrefs.SetFloat("Fscore", fishData.score);
             flup.text = "LV. " + fh.ToString("D0");
             tgivefh.text = "₩ " + givefh.ToString("F2");
@@ -96,7 +99,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetFloat("coin", GameManager.coin);
             givedt *= 1.03f;
             PlayerPrefs.SetFloat("givedt", givedt);
-            Scroll.whalescore *= levelup;
+            Scroll.whalescore *= dlevelup;
             PlayerPrefs.SetFloat("whalescore",Scroll.whalescore);
             bonusdistance *= bonuslevelup;
             PlayerPrefs.SetFloat("bonusdistance", bonusdistance); 
