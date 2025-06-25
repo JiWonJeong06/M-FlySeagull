@@ -9,7 +9,12 @@ public class GameManager : MonoBehaviour
     public static bool isGamestart = false;
     public GameObject canvas;
     public GameObject gameovercanvas;
+    [Header("정보,설정,가이드")]
     public GameObject infocanvas;
+    public GameObject Back;
+    public GameObject SettingnGuide;
+
+    [Header("플레이어, 레벨 매니저")]
     public Player player;
     public LevelManager levelManager;
     
@@ -35,6 +40,7 @@ public class GameManager : MonoBehaviour
     }
     public void ReStart()
     {
+        gameovercanvas.SetActive(false);
         SceneManager.LoadScene(0);
         Player.score = 0f;
         distancecoin = 0f;
@@ -53,16 +59,20 @@ public class GameManager : MonoBehaviour
 
     public void Setting()
     {
-
+        infocanvas.SetActive(true);
+        SettingnGuide.SetActive(true);
     }
-        public void Info()
+    public void Info()
     {
         infocanvas.SetActive(true);
+        Back.SetActive(true);
     }
 
     public void ExitInfo()
     {
-         infocanvas.SetActive(false);
+        infocanvas.SetActive(false);
+        Back.SetActive(false);
+        SettingnGuide.SetActive(false);
     }
     public void Exit()
     {

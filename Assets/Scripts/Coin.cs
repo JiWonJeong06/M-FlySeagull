@@ -14,6 +14,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundManager.effect[1].Play();
             if (isgcoin)
             {
                 GameManager.coin += gcoin;

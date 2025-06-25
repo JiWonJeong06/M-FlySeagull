@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     private float dlevelup = 1.025f; 
 
     public float bonusdistance = 1;
-    private float bonuslevelup = 1.05f;
+    private float bonuslevelup = 1.015f;
 
     public int eg = 1;
     public int fh = 1;
@@ -97,7 +97,7 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt("dt", dt);
             GameManager.coin -= givedt;
             PlayerPrefs.SetFloat("coin", GameManager.coin);
-            givedt *= 1.035f;
+            givedt *= 1.055f;
             PlayerPrefs.SetFloat("givedt", givedt);
             fishData.whalescore *= dlevelup;
             PlayerPrefs.SetFloat("whalescore",fishData.whalescore);

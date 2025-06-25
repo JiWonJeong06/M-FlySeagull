@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public FishData fishData;    
     public GameObject[] Fish;               
     public GameObject[] whalePrefab;
+    public GameObject[] seagullPrefab;
     public GameObject wp;
 
     [Header("소환 간격")]
@@ -53,13 +54,24 @@ public class SpawnManager : MonoBehaviour
                 return;
             }
         }
-        //고래 소환
+        //고래, 갈매기 무리소환
         if (Randomobj == 1)
         {
-            Vector3 spawnPosition = new Vector3(8, -1.85f, 0);
-            int randomIndex = Random.Range(0, whalePrefab.Length);
-            wp = Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
-            wp.GetComponent<Scroll>().fishData = fishData;
+            int Index = Random.Range(0, 2);
+            if (Index == 0)
+            {
+                Vector3 spawnPosition = new Vector3(8, -1.85f, 0);
+                int randomIndex = Random.Range(0, whalePrefab.Length);
+                wp = Instantiate(whalePrefab[randomIndex], spawnPosition, Quaternion.identity);
+                wp.GetComponent<Scroll>().fishData = fishData;
+            }
+            if(Index==1)
+            {
+                Vector3 spawnPosition = new Vector3(8, 1.77f, 0);
+                int randomIndex = Random.Range(0, seagullPrefab.Length);
+                wp = Instantiate(seagullPrefab[randomIndex], spawnPosition, Quaternion.identity);
+                wp.GetComponent<Scroll>().fishData = fishData;
+            }
         //demo test
         }
         

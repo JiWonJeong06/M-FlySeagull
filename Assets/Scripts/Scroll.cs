@@ -22,6 +22,12 @@ public class Scroll : MonoBehaviour
             Player.score += fishData.whalescore;
             scoreAdded = true; // 다음부터는 실행되지 않도록 설정
         }
+        if (!scoreAdded && transform.position.x <= 2.8f && CompareTag("Seagull"))
+        {
+            Player.score += fishData.whalescore;
+            SoundManager.effect[2].Play();
+            scoreAdded = true; // 다음부터는 실행되지 않도록 설정
+        }
 
         if (transform.position.x < -10)
         {

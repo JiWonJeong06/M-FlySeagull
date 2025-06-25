@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Whale"))
+        if (collision.collider.CompareTag("Whale") || collision.collider.CompareTag("Seagull"))
         {
             AnimatorChange(State.Die);
             rigid.simulated = false;
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Fish"))
         {
-
+            SoundManager.effect[0].Play();
             Destroy(collision.gameObject);
             currentEnergy += fishData.energy;
             if (currentEnergy >= maxEnergy)
