@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class BackgroundScaler : MonoBehaviour
 {
-    void Update()
+    void Awake()
     {
         FitToScreen();
     }

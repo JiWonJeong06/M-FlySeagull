@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         }
         rigid.simulated = true;
         currentEnergy -= Time.deltaTime * 1.15f;
-        distance += Time.deltaTime * 1.2f;
+        distance += Time.deltaTime * 1.5f;
         if (currentEnergy <= 0)
         {
             AnimatorChange(State.Die);

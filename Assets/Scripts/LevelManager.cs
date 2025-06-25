@@ -30,6 +30,11 @@ public class LevelManager : MonoBehaviour
     public Text tgiveeg;
     public Text tgivefh ;
    public Text tgivedt;
+
+    [Header("버튼")]
+    public Button button1;
+    public Button button2;
+    public Button button3;
     void Start()
     {
 
@@ -50,6 +55,33 @@ public class LevelManager : MonoBehaviour
         tgivedt.text = "₩ " + givedt.ToString("F2");
         dtlup.text = "LV. " + dt.ToString("D0");
         
+    }
+    void Update()
+    {
+        if (GameManager.coin < giveeg)
+        {
+            button1.interactable = false;
+        }
+        else
+        {
+            button1.interactable = true;
+        }
+        if (GameManager.coin < givefh)
+        {
+            button2.interactable = false;
+        }
+        else
+        {
+            button2.interactable = true;
+        }
+                if (GameManager.coin < givedt)
+        {
+            button3.interactable = false;
+        }
+        else
+        {
+            button3.interactable = true;
+        }
     }
     public void EnergyLevelUp() //에너지 레벨업
     {
