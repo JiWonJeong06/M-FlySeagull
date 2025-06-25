@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     public static float coin = 0;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGamestart = false;
+        Player.score += player.distance * 0.7f;
         gameovercanvas.SetActive(true);
         distancecoin += player.distance * 3 * levelManager.bonusdistance;
         coin += distancecoin;
