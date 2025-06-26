@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGamestart = false;
-        player.Totalscore += Player.score +  player.distance * 0.7f;
+        player.Totalscore += Player.score +  player.distance;
         gameovercanvas.SetActive(true);
         distancecoin += player.distance * 3 * levelManager.bonusdistance;
         coin += distancecoin;
