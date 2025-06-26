@@ -39,7 +39,7 @@ public class TextManager : MonoBehaviour
         + "항해\n" + "회피: +" + fishData.whalescore.ToString("F2") + " 코인 보너스: x" + levelManager.bonusdistance.ToString("F2") + "\n(각, +2.5%, 1.5%) 가격 상승률: +5.5%\n\n";
 
         totalcoin.text = "항해로 번 돈\n₩" + gameManager.distancecoin.ToString("F0");
-        totalscore.text =  "스코어\n " + Player.score.ToString("F0");
+        totalscore.text =  "점수\n " + Player.score.ToString("F0") + "점 + "+ (player.distance*0.7f).ToString("F0") +"m = "+ player.Totalscore.ToString("F0") + "점";
 
     }
     

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float maxEnergy = 100;
     public float distance; //항해한 거리
     public static float score;
+    public  float Totalscore;
     private Rigidbody2D rigid;
     public FishData fishData;
      public UnityEvent onHit;
