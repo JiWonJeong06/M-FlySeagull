@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject infocanvas;
     public GameObject Back;
     public GameObject SettingnGuide;
+    public GameObject pause;
 
     [Header("플레이어, 레벨 매니저")]
     public Player player;
@@ -48,6 +49,16 @@ public class GameManager : MonoBehaviour
         distancecoin = 0f;
         PlayerPrefs.Save();
     }
+    public void Gomain()
+    {
+        isGamestart = false;
+        Time.timeScale = 1f;
+        pause.SetActive(false);
+        SceneManager.LoadScene(0);
+        Player.score = 0f;
+        distancecoin = 0f;
+        PlayerPrefs.Save();
+    }
     void Awake()
     {
         Application.targetFrameRate = 60;
@@ -68,6 +79,16 @@ public class GameManager : MonoBehaviour
     {
         infocanvas.SetActive(true);
         Back.SetActive(true);
+    }
+    public void Pause()
+    {
+        pause.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public void Gostart()
+    {
+        pause.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void ExitInfo()
