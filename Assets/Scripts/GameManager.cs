@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         distancecoin += player.distance * 3 * levelManager.bonusdistance;
         coin += distancecoin;
         bestscore = PlayerPrefs.GetFloat("bestscore");
-        PlayerPrefs.SetFloat("bestscore", Mathf.Max(bestscore, Player.score));
+        PlayerPrefs.SetFloat("bestscore", Mathf.Max(bestscore, player.Totalscore));
         PlayerPrefs.SetFloat("coin", coin);
         
     }
