@@ -15,23 +15,25 @@ public class GameManager : MonoBehaviour
     public GameObject Back;
     public GameObject SettingnGuide;
     public GameObject pause;
+    public GameObject pausebutton;
 
     [Header("플레이어, 레벨 매니저")]
     public Player player;
     public LevelManager levelManager;
-    
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void GameStart()
     {
         isGamestart = true;
         canvas.SetActive(false);
         player.currentEnergy = player.maxEnergy;
-
+        pausebutton.SetActive(true);
     }
     public void GameOver()
     {
         isGamestart = false;
+        pausebutton.SetActive(false);
         player.Totalscore += Player.score +  player.distance;
         gameovercanvas.SetActive(true);
         distancecoin += player.distance * 3 * levelManager.bonusdistance;
