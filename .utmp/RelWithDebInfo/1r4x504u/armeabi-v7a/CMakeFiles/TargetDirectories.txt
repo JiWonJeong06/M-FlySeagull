@@ -1,5 +1,0 @@
-C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/1r4x504u/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/1r4x504u/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/1r4x504u/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
-C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/1r4x504u/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
-C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/1r4x504u/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

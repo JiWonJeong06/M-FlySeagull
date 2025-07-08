@@ -239,8 +239,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=30
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Program Files\Unity\Hub\Editor\6000.0.51f1\Editor\Data\PlaybackEngines\AndroidPlayer\NDK\build\cmake\android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -256,6 +256,21 @@ Unity_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Unity_SOURCE_DIR:STATIC=C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp
+
+//The directory containing a CMake configuration file for game-activity.
+game-activity_DIR:PATH=C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/game-activity
+
+//Value Computed by CMake
+game_BINARY_DIR:STATIC=C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/GameActivity
+
+//Value Computed by CMake
+game_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+game_LIB_DEPENDS:STATIC=general;android;general;game-activity::game-activity_static;general;log;general;c++;
+
+//Value Computed by CMake
+game_SOURCE_DIR:STATIC=C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity
 
 //The directory containing a CMake configuration file for games-frame-pacing.
 games-frame-pacing_DIR:PATH=C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing
@@ -371,7 +386,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

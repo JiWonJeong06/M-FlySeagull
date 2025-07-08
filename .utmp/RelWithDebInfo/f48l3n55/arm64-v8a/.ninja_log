@@ -1,0 +1,23 @@
+# ninja log v5
+4	1063	7734122912634729	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4a052389cfa4f367
+44	152	7734122903543270	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	63055d521a9ea3b9
+153	268	7734122904667949	C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f48l3n55/obj/arm64-v8a/libswappywrapper.so	ee92cadfc42db346
+23	821	7734122910235496	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e039a2e27bbb7916
+18	832	7734122910302185	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4155624d1f9d352e
+33	794	7734122909916508	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4b9853943ef6e928
+14	833	7734122910327230	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	6ac1bdc816cf139f
+10	805	7734122910054284	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	83437f453aff5339
+38	887	7734122910878542	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b60e8cbc3b4f1923
+28	1014	7734122912151899	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	83b7af2c9006941b
+1064	1134	7734122913378634	C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f48l3n55/obj/arm64-v8a/libgame.so	3da7fd04cf8f832b
+58	161	7734124972656809	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	63055d521a9ea3b9
+161	261	7734124973652129	C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f48l3n55/obj/arm64-v8a/libswappywrapper.so	ee92cadfc42db346
+17	705	7734124978090980	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	6ac1bdc816cf139f
+37	728	7734124978342031	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4b9853943ef6e928
+23	735	7734124978372166	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	83437f453aff5339
+30	745	7734124978507915	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e039a2e27bbb7916
+10	761	7734124978643326	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	4155624d1f9d352e
+50	824	7734124979295360	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b60e8cbc3b4f1923
+44	934	7734124980382542	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	83b7af2c9006941b
+5	976	7734124980783355	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4a052389cfa4f367
+976	1043	7734124981483543	C:/GithubProjectFile/M-FlySeagull/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f48l3n55/obj/arm64-v8a/libgame.so	3da7fd04cf8f832b

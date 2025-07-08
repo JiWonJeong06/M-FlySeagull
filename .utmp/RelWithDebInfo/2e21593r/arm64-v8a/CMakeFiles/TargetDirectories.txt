@@ -1,5 +1,8 @@
 C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/CMakeFiles/edit_cache.dir
 C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
 C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
 C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
 C:/GithubProjectFile/M-FlySeagull/.utmp/RelWithDebInfo/2e21593r/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
